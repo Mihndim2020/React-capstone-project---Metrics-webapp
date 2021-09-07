@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getGlobalCovidAction } from '../redux/slices/covid';
+import getGlobalCovidAction from '../redux/slices/covid';
 
 const globalHooks = () => {
   const dispatch = useDispatch();

@@ -32,4 +32,4 @@ const covidReducer = (state = [], action) => {
   }
 };
 
-export { getGlobalCovidAction, getCountryCovidAction, covidReducer };
+export default { getGlobalCovidAction, getCountryCovidAction, covidReducer };

@@ -4,7 +4,8 @@ import thunk from 'redux-thunk';
 import covidReducer from './covid';
 
 const reducer = combineReducers({
-  covidReducer,
+  global: covidReducer,
+  country: covidReducer,
 });
 
 const store = createStore(

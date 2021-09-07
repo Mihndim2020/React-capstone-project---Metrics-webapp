@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCountryCovidAction } from '../redux/slices/covid';
+import getCountryCovidAction from '../redux/slices/covid';
 
 const countryHooks = () => {
   const dispatch = useDispatch();
