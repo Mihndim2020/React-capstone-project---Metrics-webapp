@@ -11,3 +11,25 @@ const getGlobalCovidAction = () => async (dispatch) => {
     payload: global,
   });
 };
+
+const getCountryCovidAction = () => async (dispatch) => {
+  const country = await getCountryCovid();
+
+  dispatch({
+    type: GET_COUNTRY_COVID,
+    payload: country,
+  });
+};
+
+const covidReducer = (state = [], action) => {
+  switch (action.type) {
+    case GET_GLOBAL_COVID:
+      return [...state, ...action.payload];
+    case GET_COUNTRY_COVID:
+      return [...state, ...action.payload];
+    default:
+      return state;
+  }
+};
+
+export { getGlobalCovidAction, getCountryCovidAction, covidReducer };
