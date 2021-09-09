@@ -1,35 +1,40 @@
-import { getGlobalCovid, getCountryCovid } from './covidSlice';
+import getCovid, {
+  GET_DATA,
+  // GET_DATA_SUCCESS, GET_DATA_ERROR, today,
+} from './covidSlice';
 
-const GET_GLOBAL_COVID = 'covidnewsapp/covid/GET_GLOBAL_COVID';
-const GET_COUNTRY_COVID = 'covidnewsapp/covid/GET_COUNTRY_COVID';
-
-const getGlobalCovidAction = () => async (dispatch) => {
-  const global = await getGlobalCovid();
+const getCovidAction = () => async (dispatch) => {
+  const global = await getCovid();
 
   dispatch({
-    type: GET_GLOBAL_COVID,
+    type: GET_DATA,
     payload: global,
   });
 };
 
-const getCountryCovidAction = () => async (dispatch) => {
-  const country = await getCountryCovid();
+// const getCountryCovidAction = () => async (dispatch) => {
+//   const country = await getCountryCovid();
 
-  dispatch({
-    type: GET_COUNTRY_COVID,
-    payload: country,
-  });
-};
+//   dispatch({
+//     type: GET_COUNTRY_COVID,
+//     payload: country,
+//   });
+// };
+
+// const initialState = {
+//   global: [],
+// };
 
 const covidReducer = (state = [], action) => {
   switch (action.type) {
-    case GET_GLOBAL_COVID:
-      return [...state, ...action.payload];
-    case GET_COUNTRY_COVID:
+    case GET_DATA:
       return [...state, ...action.payload];
     default:
       return state;
   }
 };
 
-export default { getGlobalCovidAction, getCountryCovidAction, covidReducer };
+export {
+  covidReducer as default,
+  getCovidAction,
+};

@@ -1,11 +1,10 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-import covidReducer from './covid';
+import covidReducer from './covidSlice';
 
-const reducer = combineReducers({
+export const reducer = combineReducers({
   global: covidReducer,
-  country: covidReducer,
 });
 
 const store = createStore(
