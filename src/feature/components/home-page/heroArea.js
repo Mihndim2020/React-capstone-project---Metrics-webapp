@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMicrophone, faCog } from '@fortawesome/free-solid-svg-icons';
-// import BackButton from './BackButton';
+import BackButton from './BackButton';
 
-const Header = ({ title }) => (
+const Header = ({ backButtonTitle, title }) => (
   <div className="header-container">
     <div className="header-contents">
-      {/* <BackButton title={backButtonTitle} /> */}
+      <BackButton title={backButtonTitle} />
       <p>{title}</p>
       <div className="header-icons">
         <FontAwesomeIcon icon={faMicrophone} size="lg" color="#fff" className="header-icon" />
