@@ -1,47 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+// import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+// import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import {
   Link,
   useRouteMatch,
 } from 'react-router-dom';
-// import getCovid from '../../redux/slices/covidSlice';
-import { getCovidAction } from '../../redux/slices/covid';
-// import CountryInfo from './countryInfo';
+// import { getCovidAction } from '../../redux/slices/covid';
 import Header from './heroArea';
 import Filter from './filterInput';
 
 function GlobalInfo() {
-  // const globalComponent = [];
-
-  const dispatch = useDispatch();
-  useEffect(() => {
-    if (!global.length) {
-      dispatch(getCovidAction());
-    }
-  }, []);
-
-  const globalInfo = useSelector((state) => state.global);
-  // console.log(globalInfo);
-  // const keys = Object.keys(globalInfo);
-  // console.log(keys);
-
-  // Object.entries(globalInfo).forEach((info) => globalComponent.push(
-  //   <CountryInfo
-  //     key={info.id}
-  //     id={info.id}
-  //     name={info.name}
-  //     cases={info.cases}
-  //     death={info.death}
-  //   />,
-  // ));
-
-  // console.log(globalComponent);
-
-  // return (
-  //   <div className="my-5">
-  //     { globalComponent }
-  //   </div>
-  // );
+  // const dispatch = useDispatch();
+  // useEffect(async () => {
+  //   if (!global.length) {
+  //     await dispatch(getCovidAction());
+  //   }
+  // }, []);
 
   const { url } = useRouteMatch();
   const [minDeaths, setMinDeaths] = useState(0);
@@ -49,8 +24,11 @@ function GlobalInfo() {
   const handleMinNumberOfDeaths = (e) => {
     setMinDeaths(e.target.value);
   };
+  
+  const globalInfo = useSelector((state) => state.global);
 
-  const countriesList = globalInfo.map((country) => (
+
+  const countriesList = Object.entries(globalInfo).forEach((country) => (
     <Link
       key={country.name[0]}
       href="/#"

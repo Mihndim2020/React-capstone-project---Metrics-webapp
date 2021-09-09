@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMicrophone, faCog } from '@fortawesome/free-solid-svg-icons';
-import BackButton from './BackButton';
+import BackButton from './backButton';
 
 const Header = ({ backButtonTitle, title }) => (
   <div className="header-container">
