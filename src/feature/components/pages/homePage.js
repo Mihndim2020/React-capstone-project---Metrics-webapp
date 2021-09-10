@@ -1,23 +1,13 @@
-// import React, { useEffect, useState } from 'react';
 import React, { useState } from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
 import { useSelector } from 'react-redux';
 import {
   Link,
   useRouteMatch,
 } from 'react-router-dom';
-// import { getCovidAction } from '../../redux/slices/covid';
 import Header from './heroArea';
 import Filter from './filterInput';
 
 function GlobalInfo() {
-  // const dispatch = useDispatch();
-  // useEffect(async () => {
-  //   if (!global.length) {
-  //     await dispatch(getCovidAction());
-  //   }
-  // }, []);
-
   const { url } = useRouteMatch();
   const [minDeaths, setMinDeaths] = useState(100);
 
@@ -25,35 +15,8 @@ function GlobalInfo() {
     setMinDeaths(e.target.value);
   };
 
-  const countries = useSelector((state) => state.covidReducer.covidGlobal);
-  console.log(countries);
-  // const global = [{
-  //   id: 'Afghanistan',
-  //   name: 'Afghanistan',
-  //   confirmed: 153736,
-  //   deaths: 7151,
-  // },
-  // {
-  //   id: 'Albania',
-  //   name: 'Albania',
-  //   confirmed: 153318,
-  //   deaths: 2528,
-  // },
-  // {
-  //   id: 'Algeria',
-  //   name: 'Algeria',
-  //   confirmed: 198962,
-  //   deaths: 5489,
-  // },
-  // {
-  //   id: 'Andorra',
-  //   name: 'Andorra',
-  //   confirmed: 15070,
-  //   deaths: 130,
-  // }];
-
-  const arr = [];
-  const countriesList = arr.filter((country) => minDeaths < country.deaths)
+  const countries = useSelector((state) => state.covidReducer.covidCountries);
+  const countriesList = countries.filter((country) => minDeaths < country.deaths)
     .map((country) => (
       <Link
         key={country.name[0]}

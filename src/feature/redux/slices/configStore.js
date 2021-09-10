@@ -5,6 +5,7 @@ import covidReducer from './covidSlice';
 
 export const reducer = combineReducers({
   covidReducer,
+  detailsReducer,
 });
 
 const store = createStore(
