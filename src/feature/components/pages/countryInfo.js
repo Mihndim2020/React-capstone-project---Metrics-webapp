@@ -5,18 +5,18 @@ import {
 } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import Header from './heroArea';
-// import { getCovidAction } from '../../redux/slices/covid';
+import getDetails from '../../redux/slices/detailsSlice';
 
 const Details = ({ name }) => {
   const { url } = useRouteMatch();
   const dispatch = useDispatch();
 
-  const countryData = useSelector((state) => state.covidReducer.covidGlobal);
+  const countryData = useSelector((state) => state.detailsReducer.covidDetails);
   const countryInfo = countryData[name];
 
   useEffect(async () => {
-    if (!global.length) {
-      await dispatch(url);
+    if (!countryData.length) {
+      await dispatch(getDetails(url));
     }
   }, []);
 
