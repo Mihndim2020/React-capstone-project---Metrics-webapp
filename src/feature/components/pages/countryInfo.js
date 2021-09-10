@@ -1,22 +1,22 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-// import {
-//   useRouteMatch,
-// } from 'react-router-dom';
+import {
+  useRouteMatch,
+} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import Header from './heroArea';
-import { getCovidAction } from '../../redux/slices/covid';
+// import { getCovidAction } from '../../redux/slices/covid';
 
 const Details = ({ name }) => {
-  // const { url } = useRouteMatch();
+  const { url } = useRouteMatch();
   const dispatch = useDispatch();
 
-  const countryData = useSelector((state) => state.covidReducer.global);
+  const countryData = useSelector((state) => state.covidReducer.covidGlobal);
   const countryInfo = countryData[name];
 
   useEffect(async () => {
     if (!global.length) {
-      await dispatch(getCovidAction());
+      await dispatch(url);
     }
   }, []);
 
