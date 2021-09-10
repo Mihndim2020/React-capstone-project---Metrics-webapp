@@ -1,2 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', 'Roboto Slab', sans-serif;
+}
+
+body {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafafa;
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding-top: 5vh;
+  overflow-x: hidden;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28vw;
+  height: 70vh;
+  background-color: black;
+  border-radius: 30px;
+  padding: 3rem 1rem;
+}
+
