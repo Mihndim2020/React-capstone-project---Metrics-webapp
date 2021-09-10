@@ -1,28 +1,34 @@
-import {
-  GET_DATA, GET_DATA_SUCCESS, GET_DATA_ERROR, today,
-} from './covidSlice';
+import dayjs from 'dayjs';
+
+import { GET_COVID, GET_COVID_SUCCESS, GET_COVID_ERR } from './covidSlice';
+
+const today = dayjs().subtract(2, 'day').format('YYYY-MM-DD');
+
+// Initial state
 
 const initialState = {
-  covidGlobal: [],
+  covidCountries: [],
 };
+
+// Reducer
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case GET_DATA:
+    case GET_COVID:
       return { ...state, pending: true };
-    case GET_DATA_SUCCESS:
+    case GET_COVID_SUCCESS:
     {
-      const covidGlobal = [];
+      const covidCountries = [];
       Object.entries(action.covid.dates[today].countries).forEach((key) => {
-        covidGlobal.push({
+        covidCountries.push({
           name: key,
           confirmed: key[1].today_confirmed,
           deaths: key[1].today_deaths,
         });
       });
-      return { ...state, pending: false, covidGlobal };
+      return { ...state, pending: false, covidCountries };
     }
-    case GET_DATA_ERROR:
+    case GET_COVID_ERR:
       return { ...state, pending: false, error: action.error };
     default:
       return state;
