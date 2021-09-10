@@ -9,7 +9,7 @@ const BackButton = ({ title }) => {
   };
 
   return (
-    <button type="button" onClick={goBack}>{title}</button>
+    <button type="button" className="logo-button" onClick={goBack}>{title}</button>
   );
 };
 

@@ -44,7 +44,7 @@ function GlobalInfo() {
 
   return (
     <>
-      <Header backButtonTitle="< App" title="COVID data by Countries" />
+      <Header backButtonTitle="Covid-19" title="COVID data by Countries" />
       <Filter value={minDeaths} handler={handleMinNumberOfDeaths} />
       <div className="countries-container">
         { countriesList }
