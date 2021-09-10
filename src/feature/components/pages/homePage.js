@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
 import {
   Link,
   useRouteMatch,
 } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import Header from './heroArea';
 import Filter from './filterInput';
 
 function GlobalInfo() {
   const { url } = useRouteMatch();
-  const [minDeaths, setMinDeaths] = useState(100);
+  const [minDeaths, setMinDeaths] = useState(0);
 
   const handleMinNumberOfDeaths = (e) => {
     setMinDeaths(e.target.value);
   };
 
-  const countries = useSelector((state) => state.covidReducer.covidCountries);
+  const countries = useSelector((state) => state.covidReducer.covidGlobal);
   const countriesList = countries.filter((country) => minDeaths < country.deaths)
     .map((country) => (
       <Link

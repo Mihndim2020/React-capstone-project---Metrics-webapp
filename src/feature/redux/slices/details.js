@@ -3,14 +3,14 @@ import {
   GET_COVID_DETAILS,
   GET_COVID_DETAILS_SUCCESS,
   GET_COVID_DETAILS_ERR,
-} from '../slices/detailsSlice';
+} from './detailsSlice';
 
 const today = dayjs().subtract(2, 'day').format('YYYY-MM-DD');
 
 // Initial state
 
 const initialState = {
-  covidDetails: [],
+  countryDetails: [],
 };
 
 // Reducer
@@ -23,7 +23,7 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         pending: false,
-        covidDetails: action.details.dates[today].countries,
+        countryDetails: action.details.dates[today].countries,
       };
     case GET_COVID_DETAILS_ERR:
       return { ...state, pending: false, error: action.error };

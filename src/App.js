@@ -18,36 +18,8 @@ const App = () => {
     await dispatch(getCovid());
   }, []);
 
-  const countries = useSelector((state) => state.covidGlobal);
-  console.log(countries);
-  // const global = [{
-  //   id: 'Afghanistan',
-  //   name: 'Afghanistan',
-  //   confirmed: 153736,
-  //   deaths: 7151,
-  // },
-  // {
-  //   id: 'Albania',
-  //   name: 'Albania',
-  //   confirmed: 153318,
-  //   deaths: 2528,
-  // },
-  // {
-  //   id: 'Algeria',
-  //   name: 'Algeria',
-  //   confirmed: 198962,
-  //   deaths: 5489,
-  // },
-  // {
-  //   id: 'Andorra',
-  //   name: 'Andorra',
-  //   confirmed: 15070,
-  //   deaths: 130,
-  // }];
-
-  const arr = [];
-
-  const routes = arr.map((country) => (
+  const countries = useSelector((state) => state.covidReducer.covidGlobal);
+  const routes = countries.map((country) => (
     <Route key={country.name[0]} path={`/${country.name[0].toLowerCase()}`}>
       <Details name={country.name[0]} />
     </Route>

@@ -11,7 +11,7 @@ const Details = ({ name }) => {
   const { url } = useRouteMatch();
   const dispatch = useDispatch();
 
-  const countryData = useSelector((state) => state.detailsReducer.covidDetails);
+  const countryData = useSelector((state) => state.detailsReducer.countryDetails);
   const countryInfo = countryData[name];
 
   useEffect(async () => {

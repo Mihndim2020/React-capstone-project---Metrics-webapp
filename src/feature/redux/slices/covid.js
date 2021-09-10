@@ -7,7 +7,7 @@ const today = dayjs().subtract(2, 'day').format('YYYY-MM-DD');
 // Initial state
 
 const initialState = {
-  covidCountries: [],
+  covidGlobal: [],
 };
 
 // Reducer
@@ -18,15 +18,15 @@ const reducer = (state = initialState, action) => {
       return { ...state, pending: true };
     case GET_COVID_SUCCESS:
     {
-      const covidCountries = [];
+      const covidGlobal = [];
       Object.entries(action.covid.dates[today].countries).forEach((key) => {
-        covidCountries.push({
+        covidGlobal.push({
           name: key,
           confirmed: key[1].today_confirmed,
           deaths: key[1].today_deaths,
         });
       });
-      return { ...state, pending: false, covidCountries };
+      return { ...state, pending: false, covidGlobal };
     }
     case GET_COVID_ERR:
       return { ...state, pending: false, error: action.error };
