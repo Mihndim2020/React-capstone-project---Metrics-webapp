@@ -9,7 +9,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import getCovid from './feature/redux/slices/covidSlice';
 import GlobalInfo from './feature/components/pages/homePage';
 import Details from './feature/components/pages/countryInfo';
-// import { getCovidAction } from './feature/redux/slices/covid';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -26,7 +25,7 @@ const App = () => {
   ));
 
   return (
-    <div>
+    <div className="app">
       <Router>
         <Switch>
           <Route exact path="/">
