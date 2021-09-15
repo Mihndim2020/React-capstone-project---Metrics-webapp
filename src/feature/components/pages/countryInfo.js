@@ -22,7 +22,7 @@ const Details = ({ name }) => {
 
   return (
     <div className="country-container">
-      <Header title="Contry details" backButtonTitle="Countries" />
+      <Header title="Contry details" backButtonTitle="Global" />
       <div className="country-details">
         <h2>{countryInfo?.name}</h2>
         <p>

@@ -33,8 +33,12 @@ body {
 /* ----------- Header ------------ */
 
 .header-container {
+  background-image: url("./feature/components/images/world.png");
+  background-position: center;
+  background-size: cover;
   background-color: #ac3763;
   border-bottom: 2px solid #fff;
+  height: 10vh;
 }
 
 .header-contents {
@@ -77,12 +81,15 @@ button {
 
 .deaths-filter {
   background-color: #fa498d;
+  font-weight: 600;
   border-bottom: 2px solid #fff;
   padding: 3px 8px;
   color: #fff;
 }
 
 .deaths-filter input {
+  border: none;
+  padding: 2px;
   border-radius: 4px;
 }
 
@@ -115,11 +122,12 @@ a.country-card {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  padding-top: 2rem;
 }
 
 .country-link h2 {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 900;
   text-decoration: none;
   color: #fff;
   margin: 5px 10px;
@@ -127,7 +135,7 @@ a.country-card {
 
 .country-link p {
   color: #fff;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 14px;
   margin: 15px 10px;
 }
