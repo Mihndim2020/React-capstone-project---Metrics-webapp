@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# COVID NEWS APP
 
 > This is a mobile web app the provides daily updates on the global spread of covid-19. The data is sourced from the [Narrativa Data API](https://covid19tracking.narrativa.com/index_en.html). The project is build with React a JavaScript library, and Redux for state management. 
 
@@ -16,6 +16,10 @@ The app displays the global statistics on the spread of covid-19 for each countr
 - JAVASCRIPT
 - REACT
 - REDUX
+
+## Video Presentation
+
+[Checkout my video presentation](https://www.loom.com/share/b3d3cd18e24d42e5b88aa666f158cc38)
 
 ## Live Demo
 
