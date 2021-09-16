@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <div
+    className="header-container"
+  >
+    <div
+      className="header-contents"
+    >
+      <button
+        className="logo-button"
+        onClick={[Function]}
+        type="button"
+      >
+        Covid-19
+      </button>
+      <p
+        className="back-button"
+      >
+        COVID data by Countries
+      </p>
+    </div>
+  </div>,
+  <div
+    className="deaths-filter"
+  >
+     Filter by minimum number of Deaths: 
+    <input
+      id="deaths-range"
+      max="9999999999"
+      min="0"
+      name="death-range"
+      onChange={[Function]}
+      type="number"
+      value={0}
+    />
+  </div>,
+  <div
+    className="countries-container"
+  />,
+]
+`;

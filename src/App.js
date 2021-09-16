@@ -1,11 +1,41 @@
-import React from 'react';
+import './App.css';
+import React, { useEffect } from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+} from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import getCovid from './feature/redux/slices/covidSlice';
+import GlobalInfo from './feature/components/pages/homePage';
+import Details from './feature/components/pages/countryInfo';
 
-function App() {
+const App = () => {
+  const dispatch = useDispatch();
+
+  useEffect(async () => {
+    await dispatch(getCovid());
+  }, []);
+
+  const countries = useSelector((state) => state.covidReducer.covidGlobal);
+  const routes = countries.map((country) => (
+    <Route key={country.name[0]} path={`/${country.name[0].toLowerCase()}`}>
+      <Details name={country.name[0]} />
+    </Route>
+  ));
+
   return (
-    <div className="App">
-      <header className="App-header" />
+    <div className="app">
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <GlobalInfo />
+          </Route>
+          { routes }
+        </Switch>
+      </Router>
     </div>
   );
-}
+};
 
 export default App;

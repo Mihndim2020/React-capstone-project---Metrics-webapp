@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="country-container"
+>
+  <div
+    className="header-container"
+  >
+    <div
+      className="header-contents"
+    >
+      <button
+        className="logo-button"
+        onClick={[Function]}
+        type="button"
+      >
+        Global
+      </button>
+      <p
+        className="back-button"
+      >
+        Contry details
+      </p>
+    </div>
+  </div>
+  <div
+    className="country-details"
+  >
+    <h2 />
+    <p>
+      Source:
+       
+    </p>
+    <p>
+      Deaths until today:
+       
+    </p>
+    <p>
+      Deaths today:
+       
+    </p>
+    <p>
+      Confirmed cases until today:
+       
+    </p>
+    <p>
+      Confirmed cases today:
+       
+    </p>
+    <p>
+      Open cases until today:
+       
+    </p>
+    <p>
+      Recovered cases until today:
+       
+    </p>
+    <p>
+      New open cases:
+       
+    </p>
+    <p>
+      New recovered cases:
+       
+    </p>
+  </div>
+</div>
+`;

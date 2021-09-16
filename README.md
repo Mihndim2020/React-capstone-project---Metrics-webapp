@@ -1,44 +1,69 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-## Available Scripts
+# COVID NEWS APP
 
-In the project directory, you can run:
+> This is a mobile web app the provides daily updates on the global spread of covid-19. The data is sourced from the [Narrativa Data API](https://covid19tracking.narrativa.com/index_en.html). The project is build with React a JavaScript library, and Redux for state management. 
 
-### `yarn start`
+![screenshot](images/covidhome.png)
+![screenshot](images/details.png)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The app displays the global statistics on the spread of covid-19 for each country, number of confirmed cases and deaths. You click on a particular country to get detailed information about that country. 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Built With
 
-### `yarn test`
+- HTML 5
+- CSS3
+- JAVASCRIPT
+- REACT
+- REDUX
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Video Presentation
 
-### `yarn build`
+[Checkout my video presentation](https://www.loom.com/share/b3d3cd18e24d42e5b88aa666f158cc38)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Live Demo
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+[Checkout the live version](https://reverent-hoover-d8f9a0.netlify.app/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Getting Started
+To get a local copy up and running follow these simple example steps.
+- Open your terminal
+- Clone the repository: `git clone git@github.com:Mihndim2020/React-capstone-project---Metrics-webapp.git`
+- Cd into 
+- Run npm install to install dependencies
+- Run npm start to run the app on the browser
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Prerequisites
+- Node v14.9.0
+- Browsers: Chrome, Firefox, Safari.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Authors
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+👤 **Mih Julius**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Github: [@Mihndim2020](https://github.com/Mihndim2020)
+- Twitter: [@mihndim](https://github.com/mih-julius)
+- Linkedin: [Mih Julius](https://www.linkedin.com/mih-julius)
 
-## Learn More
+## 🤝 Contributing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Contributions, issues, and feature requests are welcome!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Feel free to check the [issues page](https://github.com/mrigorir/pokemon-world/issues).
+
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+
+## Acknowledgments
+
+- Microverse community
+- Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/gallery/31579789/Ballhead-App-%28Free-PSDs%29)
+
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
