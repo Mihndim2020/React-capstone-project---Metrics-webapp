@@ -35,7 +35,7 @@ To get a local copy up and running follow these simple example steps.
 - Run npm start to run the app on the browser
 
 ### Prerequisites
-- Node v14.9.0
+- Node v14.9.0 or above
 - Browsers: Chrome, Firefox, Safari.
 
 ## Authors
