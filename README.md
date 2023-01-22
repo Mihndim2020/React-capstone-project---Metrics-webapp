@@ -36,7 +36,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 - Node v14.9.0 or above
-- Browsers: Chrome, Firefox, Safari.
+- Browsers: Chrome, Firefox, Safari, MS Edge.
 
 ## Author
 
