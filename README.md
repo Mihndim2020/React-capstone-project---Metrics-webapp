@@ -38,7 +38,7 @@ To get a local copy up and running follow these simple example steps.
 - Node v14.9.0 or above
 - Browsers: Chrome, Firefox, Safari.
 
-## Authors
+## Author
 
 👤 **Mih Julius**
 
