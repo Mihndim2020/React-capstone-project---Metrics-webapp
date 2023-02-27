@@ -32,7 +32,7 @@ To get a local copy up and running follow these simple example steps.
 - Clone the repository: `git clone git@github.com:Mihndim2020/React-capstone-project---Metrics-webapp.git`
 - Cd into 
 - Run npm install to install dependencies
-
+- Run npm start to run the app on the browser
 
 ### Prerequisites
 - Node v14.9.0 or above
