@@ -14,6 +14,8 @@ The app displays the global statistics on the spread of covid-19 for each countr
 - HTML 5
 - CSS3
 - JAVASCRIPT
+- REACT
+- REDUX
 
 ## Video Presentation
 
