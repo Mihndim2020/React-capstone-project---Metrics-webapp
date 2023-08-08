@@ -62,8 +62,7 @@ Give a ⭐️ if you like this project!
 
 - Microverse community
 - The Odin project
-- W3Schools
-- MDN
+
 - Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/gallery/31579789/Ballhead-App-%28Free-PSDs%29)
 
 
